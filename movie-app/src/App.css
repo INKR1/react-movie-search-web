@@ -180,3 +180,45 @@ h1{
   color: #d88769;
   font-family: var(--font-roboto);
 }
+
+@media screen and (max-width: 600px) {
+  .app {
+    padding: 4rem 2rem;
+  }
+  .searchField {
+    width: 110%;
+  }
+
+  .search {
+    padding: 1rem 1.75rem;
+    width: 100%;
+  }
+
+  .search input {
+    font-size: 1rem;
+  }
+
+  .search img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .app {
+    padding: 4rem 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    margin-top: 2rem;
+  }
+
+  .movie {
+    width: "100%";
+    margin: 1rem;
+  }
+} 
