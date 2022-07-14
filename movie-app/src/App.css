@@ -165,3 +165,18 @@ h1{
 .movie:hover div:nth-of-type(1) {
   opacity: 1;
 } 
+
+.empty {
+  width: 100%;
+  margin-top: 4rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty h2 {
+  font-size: 1.5rem;
+  color: #d88769;
+  font-family: var(--font-roboto);
+}
