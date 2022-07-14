@@ -12,11 +12,10 @@ function App() {
 
   useEffect(() => {
     searchMovies('Godzilla');
-  }
-  , [])
+  }, [])
 
   return (
-    <div className="App">
+    <div className="app">
     </div>
   );
 }
