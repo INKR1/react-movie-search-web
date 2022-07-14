@@ -13,3 +13,7 @@ Some movies do not have poster images. Instead I used a placeholder.
 -  CSS
 -  React
 -  JS
+
+## Video
+You can click [_here_][movie-search-web-app.webm](https://user-images.githubusercontent.com/92999496/179056141-5b4f77f6-4927-4caf-b3ab-bd90f5289888.webm) to see how it works
+
