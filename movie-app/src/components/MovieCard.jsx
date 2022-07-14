@@ -1,17 +1,17 @@
 import React from 'react'
 
-export default function MovieCard({ movie }) {
+export default function MovieCard({ movie: {imdbID, Year, Poster, Title, Type} }) {
   return (
-        <div className='movie'>
+        <div className='movie' key={imdbID}>
           <div>
-            <p>{movie.Year}</p>
+            <p>{Year}</p>
           </div>
           <div>
-          <img src={movie.Poster !== 'N/A' ? movie.Poster : 'http://via.placeholder.com/400'} alt={movie.Title}/>
+          <img src={Poster !== 'N/A' ? Poster : 'http://via.placeholder.com/400'} alt={Title}/>
           </div>
           <div>
-            <span>{movie.Type}</span>
-            <h3>{movie.Title}</h3>
+            <span>{Type}</span>
+            <h3>{Title}</h3>
           </div>
         </div>
   )
