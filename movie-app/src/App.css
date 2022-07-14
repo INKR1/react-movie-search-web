@@ -12,7 +12,8 @@
 
 body {
   font-family: var(--font-roboto);
-  background-color: #212426;
+  background: -webkit-gradient(linear, left top, right bottom, from(#39293a), to(#82495b)) fixed;
+
 }
 
 .app {
@@ -22,3 +23,27 @@ body {
   align-items: center;
   flex-direction: column;
 } 
+
+h1{
+  font-size: 3.5rem;
+  letter-spacing: 0.9px;
+  color:#9d6778;
+  background-size: 500%;
+  animation: animate 2s linear infinite;
+}
+
+@keyframes animate {
+  0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%{
+    color: #9d6778;
+    text-shadow: none;
+  }
+  18.1%,20.1%,30%,50.1%,60.1%,80%,90.1%,92%,100%{
+    color: #c7907c;
+    text-shadow: 
+    0 0 10px #C86272,
+    0 0 20px #C86272,
+    0 0 40px #C86272,
+    0 0 50px #C86272,
+    0 0 160px #C86272
+  }
+}

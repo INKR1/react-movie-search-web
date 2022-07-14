@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 
+import './App.css';
+
 const API_URL = 'http://www.omdbapi.com?apikey=144c5ea3';
 
 function App() {
@@ -16,6 +18,7 @@ function App() {
 
   return (
     <div className="app">
+      <h1>MovieNight</h1>
     </div>
   );
 }
