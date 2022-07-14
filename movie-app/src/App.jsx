@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 import MovieCard from './components/MovieCard';
 import searchIcon from './search.svg';
@@ -6,20 +6,14 @@ import './App.css';
 
 const API_URL = 'http://www.omdbapi.com?apikey=144c5ea3';
 
-const movie1 = {
-  "Title": "Godzilla: King of the Monsters",
-  "Year": "2019",
-  "imdbID": "tt3741700",
-  "Type": "movie",
-  "Poster": "https://m.media-amazon.com/images/M/MV5BOGFjYWNkMTMtMTg1ZC00Y2I4LTg0ZTYtN2ZlMzI4MGQwNzg4XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg"
-}
-
 function App() {
+
+  const [movies, setMovies] = useState([]);
 
   const searchMovies = async (title) => {
     const response = await fetch(`${API_URL}&s=${title}`);
     const data = await response.json();
-    console.log(data);
+    setMovies(data.Search);
   }
 
   useEffect(() => {
@@ -41,9 +35,20 @@ function App() {
             onClick={() => {}}
           />
         </div>
-        <div className='container'>
-        <MovieCard movie1={movie1}/>
-      </div>
+        {
+          movies?.length > 0 ?
+          (
+            <div className='container'>
+              {movies.map(movie => (
+                <MovieCard movie={movie} />
+              ))}
+            </div>
+          ) : (
+            <div className='empty'>
+              <h2>No movies found</h2>
+            </div>
+          )
+        }
     </div>
   );
 }
