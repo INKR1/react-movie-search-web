@@ -38,7 +38,7 @@ function App() {
           <img 
             src={searchIcon} 
             alt="search"
-            onclick={() => {}}
+            onClick={() => {}}
           />
         </div>
         <div className='container'>
